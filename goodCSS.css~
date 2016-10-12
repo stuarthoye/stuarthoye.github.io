@@ -1,0 +1,94 @@
+/*
+	Colour-scheme: 
+	https://coolors.co/11151c-212d40-364156-7d4e57-d66853
+
+	Setting variables in CSS:
+	https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables
+*/
+:root {
+	--bg-dark: #11151C;
+	--bg-mid: #212D40;
+	--bg-light: #607499;
+	--col-main: #7d4E57;
+	--col-light: #d66853;
+	--col-v-light: #EFC737;
+}
+
+/*
+	List of common webfonts:
+	http://www.w3schools.com/cssref/css_websafe_fonts.asp
+
+.Title {
+	font-family: "Arial Black", Gadget, sans-serif;
+	font-size: 200%;
+	color: #D66853;
+}
+
+.SubTitle {
+	font-family: "Arial Black", Gadget, sans-serif;
+	font-size: 150%;
+	color: #7D4E57;
+}
+*/
+
+/* 
+	Tutorial on creating a navbar	
+	http://www.w3schools.com/css/css_navbar.asp 
+*/	
+
+body {
+	color: black;
+	background: var(--bg-light);
+}
+
+div {
+	color: black;
+	background: var(--bg-light);
+}
+
+/*.NavBar {
+	background: var(--bg-mid);
+	border: 1px solid black;
+}*/
+
+.NavBar ul {
+	background: var(--bg-mid);
+	color: var(--col-light);
+	font-family: "Arial Black", Gadget, sans-serif;
+
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	display: inline;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.NavBar li {
+	float: left;
+	border-right: 1pt solid var(--bg-dark);
+}
+
+.NavBar li:last-child {
+	border-right: none;
+}
+
+.NavBar li a {
+	display: block;
+	color: var(--col-mid);
+	text-align: center;
+	padding: 1em;
+}
+
+.NavBar a:hover {
+	color: var(--col-v-bright)
+}
+
+.active {
+	background-color: var(--bg-light);
+	color: var(--col-bright);
+}
+
+
