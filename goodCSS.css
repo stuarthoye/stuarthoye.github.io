@@ -4,71 +4,101 @@
 
 	Setting variables in CSS:
 	https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables
-*/
-:root {
-	--bg-dark: #11151C;
-	--bg-mid: #212D40;
-	--bg-light: #607499;
-	--col-main: #7d4E57;
-	--col-light: #d66853;
-	--col-v-light: #EFC737;
-}
 
-/*
 	List of common webfonts:
 	http://www.w3schools.com/cssref/css_websafe_fonts.asp
 
-.Title {
-	font-family: "Arial Black", Gadget, sans-serif;
-	font-size: 200%;
-	color: #D66853;
-}
+        Tutorial on importing fonts into webpage:
+        http://www.webdesignerdepot.com/2013/01/how-to-use-any-font-you-like-with-css3/
 
-.SubTitle {
-	font-family: "Arial Black", Gadget, sans-serif;
-	font-size: 150%;
-	color: #7D4E57;
-}
+        Tutorial on creating a navbar	
+	http://www.w3schools.com/css/css_navbar.asp 
+
+        Rotating Images in CSS:
+        http://stackoverflow.com/questions/20061774/rotate-an-image-in-image-source-in-html
+        user: VLS
 */
 
-/* 
-	Tutorial on creating a navbar	
-	http://www.w3schools.com/css/css_navbar.asp 
-*/	
+@fontface {
+    font-family: 'bdPlakatbau';
+    src: local('fonts/BDPLAKAT'),
+         url('fonts/BDPLAKAT.ttf')
+         format('truetype');
+}
 
 body {
-	color: black;
-	background: var(--bg-light);
+    width: 500pt;
+    color: black;
+    background-image: url("img/bg-5-full.jpg");
+    margin: 0;
+    padding: 0;
 }
 
-div {
-	color: black;
-	background: var(--bg-light);
+ul {
+    list-style-type: none;    
 }
 
-/*.NavBar {
-	background: var(--bg-mid);
-	border: 1px solid black;
-}*/
+.headshot {
+    position: absolute;
+    left: 0pt;
+    top: 0pt;
+    z-index: -1;
+    width: 250pt;
+    float:left;
+    background: #212d40;
+}
+
+.columnContainer {
+    margin-top: 35pt;
+    margin-left: 250pt;
+    width: 100%;
+}
+
+.topSection {
+    width: 100%;
+    background: #364156;
+    opacity: 0.9;
+}
+
+.leftColumn {
+    float:left;
+    background: #364156;
+    opacity: 0.9;
+
+    height: 200pt;
+    width: 50%;
+}
+
+.rightColumn {
+    float:right;
+    background: #364156;
+    opacity: 0.9;
+    
+    height: 200pt;
+    width: 50%;
+}
+
+.topSection {
+    height: 200pt;
+    float:none;
+}
 
 .NavBar ul {
-	background: var(--bg-mid);
-	color: var(--col-light);
-	font-family: "Arial Black", Gadget, sans-serif;
+    color: #d66853;
+    background: #212d40;
+    border-bottom: 3pt solid #364156;
 
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	display: inline;
-	position: fixed;
-	top: 0;
-	width: 100%;
+    font-family: "Arial Black", Gadget, sans-serif;
+    margin: 0;
+    width: 100%;
+    display: inline;
+    position: fixed;
+    top: 0;
 }
 
 .NavBar li {
 	float: left;
-	border-right: 1pt solid var(--bg-dark);
+	border-right: 1pt solid #364156;
 }
 
 .NavBar li:last-child {
@@ -76,19 +106,25 @@ div {
 }
 
 .NavBar li a {
+        height: 20pt;
 	display: block;
-	color: var(--col-mid);
+	color: #7d4e57;
 	text-align: center;
-	padding: 0.5em;
+	padding: 7pt;
 }
 
 .NavBar a:hover {
-	color: var(--col-v-bright)
+	color: #d66853;
 }
 
-.active {
-	background-color: var(--bg-light);
-	color: var(--col-bright);
+.NavBar a.active {
+	background-color: #364156;
+	color: #d66853;
 }
 
-
+.NavBar a.about {
+	background-color: #364156;
+	color: #d66853;
+        height: 100%;
+        font-size: 10pt;
+}
