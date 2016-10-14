@@ -1,10 +1,7 @@
 /*
 	Colour-scheme: 
 	https://coolors.co/11151c-212d40-364156-7d4e57-d66853
-
-	Setting variables in CSS:
-	https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables
-
+        
 	List of common webfonts:
 	http://www.w3schools.com/cssref/css_websafe_fonts.asp
 
@@ -17,25 +14,61 @@
         Rotating Images in CSS:
         http://stackoverflow.com/questions/20061774/rotate-an-image-in-image-source-in-html
         user: VLS
+
+        Gradients in CSS:
+        http://www.w3schools.com/css/css3_gradients.asp
+        https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient
 */
 
 @fontface {
-    font-family: 'bdPlakatbau';
-    src: local('fonts/BDPLAKAT'),
-         url('fonts/BDPLAKAT.ttf')
-         format('truetype');
+    font-family: bdPlakatbau;
+    src: url('fonts/BDPLAKAT.ttf');
 }
 
 body {
     width: 500pt;
     color: black;
-    background-image: url("img/bg-5-full.jpg");
+    background: #11151c;
     margin: 0;
     padding: 0;
 }
 
 ul {
     list-style-type: none;    
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 10pt;
+}
+
+div {
+    color: #d66853;
+}
+
+p {
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 10pt;
+    padding-left: 10pt;
+}
+
+.title {
+    font-size: 25pt;
+    text-align: center;
+    font-family: "Arial Black", Gadget, sans-serif;
+    color:  #d66853;
+}
+
+.subTitle {
+    font-size: 15pt;
+    text-align: center;
+    font-family: "Arial Black", Gadget, sans-serif;
+    color:  #d66853;
+}
+
+.title a {
+    color:  #d66853;
+}
+
+.subTitle a {
+    color:  #d66853;
 }
 
 .headshot {
@@ -43,9 +76,9 @@ ul {
     left: 0pt;
     top: 0pt;
     z-index: -1;
-    width: 250pt;
+    width: 245pt;
     float:left;
-    background: #212d40;
+    border-right: 5pt solid #364156;
 }
 
 .columnContainer {
@@ -57,25 +90,26 @@ ul {
 .topSection {
     width: 100%;
     background: #364156;
-    opacity: 0.9;
+    background: -moz-linear-gradient(left, #364156, #364156 50%, #11151c);
+    background: -webkit-linear-gradient(left, #364156 , #11151c);
+    background: linear-gradient(90deg,#364156, #364156 50%, #11151c);
+    border-bottom: 5pt solid #11151c;
 }
 
 .leftColumn {
     float:left;
-    background: #364156;
-    opacity: 0.9;
-
     height: 200pt;
     width: 50%;
+    background: #364156;
 }
 
 .rightColumn {
     float:right;
-    background: #364156;
-    opacity: 0.9;
-    
     height: 200pt;
     width: 50%;
+    background: #364156;
+    background: -moz-linear-gradient(left, 364156, #11151c);
+    background: -webkit-linear-gradient(left, #364156 , #11151c);
 }
 
 .topSection {
@@ -86,7 +120,7 @@ ul {
 .NavBar ul {
     color: #d66853;
     background: #212d40;
-    border-bottom: 3pt solid #364156;
+    border-bottom: 5pt solid #364156;
 
     font-family: "Arial Black", Gadget, sans-serif;
     margin: 0;
@@ -101,16 +135,16 @@ ul {
 	border-right: 1pt solid #364156;
 }
 
-.NavBar li:last-child {
-	border-right: none;
-}
-
 .NavBar li a {
         height: 20pt;
 	display: block;
 	color: #7d4e57;
 	text-align: center;
 	padding: 7pt;
+}
+
+.NavBar li:last-child {
+	border-right: none;
 }
 
 .NavBar a:hover {
