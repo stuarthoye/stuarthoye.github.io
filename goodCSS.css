@@ -93,6 +93,17 @@ a {
     border: 3pt solid #212d40;
 }
 
+.boilerplate {
+    width: 80pt;
+    height: 80pt;
+    background: #212d40;
+    border: solid 5pt #364156;
+    color: #d66853;
+    position: absolute;
+    left: 400pt;
+    top: 250pt;
+}
+
 .columnContainer {
     margin-top: 35pt;
     margin-left: 250pt;
