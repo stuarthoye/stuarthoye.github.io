@@ -20,13 +20,9 @@
         https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient
 */
 
-@fontface {
-    font-family: bdPlakatbau;
-    src: url('fonts/BDPLAKAT.ttf');
-}
-
 body {
     width: 500pt;
+    height: 100%;
     color: black;
     background: #11151c;
     margin: 0;
@@ -41,12 +37,17 @@ ul {
 
 div {
     color: #d66853;
+    height: auto;
 }
 
 p {
     font-family: "Arial Black", Gadget, sans-serif;
     font-size: 10pt;
     padding-left: 10pt;
+}
+
+a {
+    color: #d66853;
 }
 
 .title {
@@ -63,11 +64,8 @@ p {
     color:  #d66853;
 }
 
-.title a {
-    color:  #d66853;
-}
-
 .subTitle a {
+    padding-top: 5pt;
     color:  #d66853;
 }
 
@@ -81,39 +79,53 @@ p {
     border-right: 5pt solid #364156;
 }
 
+.footer {
+    position: absolute;
+    left: 830pt;
+    top: 780pt;
+    background-color: #364156;
+    color: #d66853;
+    font-size: 10pt;
+    font-family: "Arial Black", Gadget, sans-serif;
+    color: #d66853;
+    background: #364156;
+    padding: 5pt;
+    border: 3pt solid #212d40;
+}
+
 .columnContainer {
     margin-top: 35pt;
     margin-left: 250pt;
     width: 100%;
-}
-
-.topSection {
-    width: 100%;
+    height: 750pt;
     background: #364156;
     background: -moz-linear-gradient(left, #364156, #364156 50%, #11151c);
     background: -webkit-linear-gradient(left, #364156 , #11151c);
     background: linear-gradient(90deg,#364156, #364156 50%, #11151c);
+}
+
+.topSection {
+    width: 100%;
     border-bottom: 5pt solid #11151c;
+    border-right: none;
 }
 
 .leftColumn {
     float:left;
     height: 200pt;
     width: 50%;
-    background: #364156;
+
 }
 
 .rightColumn {
     float:right;
     height: 200pt;
     width: 50%;
-    background: #364156;
-    background: -moz-linear-gradient(left, 364156, #11151c);
-    background: -webkit-linear-gradient(left, #364156 , #11151c);
+
 }
 
 .topSection {
-    height: 200pt;
+    height: auto;
     float:none;
 }
 
@@ -121,7 +133,6 @@ p {
     color: #d66853;
     background: #212d40;
     border-bottom: 5pt solid #364156;
-
     font-family: "Arial Black", Gadget, sans-serif;
     margin: 0;
     width: 100%;
@@ -148,17 +159,11 @@ p {
 }
 
 .NavBar a:hover {
-	color: #d66853;
+    color: #d66853;
 }
 
 .NavBar a.active {
-	background-color: #364156;
-	color: #d66853;
+    background-color: #364156;
+    color: #d66853;
 }
 
-.NavBar a.about {
-	background-color: #364156;
-	color: #d66853;
-        height: 100%;
-        font-size: 10pt;
-}
