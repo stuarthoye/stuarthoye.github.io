@@ -125,14 +125,14 @@ a {
     float:left;
     height: 45%;
     width: 33%;
-
+    text-align:left;
 }
 
 .rightColumn {
     float:right;
     height: 45%;
     width: 33%;
-
+    padding-right:25%;
 }
 
 .topSection {
