@@ -123,15 +123,15 @@ a {
 
 .leftColumn {
     float:left;
-    height: 200pt;
-    width: 50%;
+    height: 45%;
+    width: 33%;
 
 }
 
 .rightColumn {
     float:right;
-    height: 200pt;
-    width: 50%;
+    height: 45%;
+    width: 33%;
 
 }
 
